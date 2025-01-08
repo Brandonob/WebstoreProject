@@ -9,9 +9,10 @@ import {
   Td,
   FormControl,
   FormLabel,
-} from '@chakra-ui/react';
-import { Box, Button, Input, useDisclosure } from '@chakra-ui/react';
-import {
+  Box,
+  Button,
+  Input,
+  useDisclosure,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -20,7 +21,8 @@ import {
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react';
-import { Product, Order } from './types/types'; // Assuming these types are defined elsewhere
+
+import { Product, Order } from './types/types';
 
 export default function AdminPage() {
   const [products, setProducts] = useState<Product[]>([]);
