@@ -1,6 +1,7 @@
 const products = require('express').Router();
-const { createProduct } = require('../queries/products');
+const { createProduct, fetchAllProducts } = require('../queries/products');
 
 products.post('/', createProduct);
+products.get('/', fetchAllProducts);
 
 module.exports = products;

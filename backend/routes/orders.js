@@ -1,6 +1,7 @@
 const orders = require('express').Router();
-const { createOrder } = require('../queries/orders');
+const { createOrder, fetchAllOrders } = require('../queries/orders');
 
 orders.post('/', createOrder);
+orders.get('/', fetchAllOrders);
 
 module.exports = orders;
