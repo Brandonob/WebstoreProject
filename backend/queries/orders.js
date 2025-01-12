@@ -2,7 +2,7 @@ const db = require('../db/index');
 
 const createOrder = async (req, res, next) => {
   try {
-    await db.none(
+    await db.one(
       'INSERT INTO orders (id, email) VALUES($(id), $(email))',
       req.body
     );

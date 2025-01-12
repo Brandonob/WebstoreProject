@@ -1,6 +1,7 @@
 const users = require('express').Router();
-const { createUser } = require('../queries/users');
+const { createUser, fetchAllUsers } = require('../queries/users');
 
 users.post('/', createUser);
+users.get('/', fetchAllUsers);
 
 module.exports = users;
